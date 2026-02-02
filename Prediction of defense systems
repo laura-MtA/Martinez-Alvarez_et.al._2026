@@ -1,0 +1,41 @@
+## Prediction of defense systems
+
+This directory contains scripts associated with the prediction of microbial defense systems used in the analyses described in:
+
+**Martínez-Alvarez et al. (2026)**  
+*Diversity and Evolution of Archaeal Immune Strategies*
+
+The scripts are provided as **examples of the analytical procedures** applied in this part of the study. They are **not intended to function as a complete or automated pipeline**, and may require modification to run on other datasets or computing environments.
+
+---
+
+## Requirements
+
+The analyses illustrated here rely on the following external tools (versions used in the study):
+
+- **PADLOC** v2.0.0  
+  https://github.com/padlocbio/padloc-db/tree/master
+- **DefenseFinder** v1.2.2  
+  https://github.com/mdmparis/defense-finder
+- **CRISPRCasTyper (CCTyper)** v1.8.0  
+  https://github.com/Russel88/CRISPRCasTyper
+- **MMseqs2** v17.b804f  
+  https://github.com/soedinglab/MMseqs2
+
+---
+
+## Repository contents
+
+The files in this directory exemplify the custom scripts and computational steps used to identify and annotate defense systems.  
+They are intended to support **transparency, reproducibility, and reuse of the analytical logic**, rather than exact reproduction of the full workflow.
+
+File paths, parameters, and intermediate steps may be simplified for clarity.
+
+---
+
+## Notes on reproducibility
+
+Exact reproduction of the results presented in the manuscript may additionally require:
+- Specific database versions
+- Manual filtering or curation steps
+- Software dependencies described in the manuscript and supplementary materials
