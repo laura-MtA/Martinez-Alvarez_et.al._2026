@@ -2,7 +2,7 @@
 
 ## Script
 
-### `script_bubbleplot.R`
+##### `script_bubbleplot.R`
 
 Generates the bubble plot shown in **Figure 2**, summarising the abundance and distribution of the top 20 most abundant defense systems across Archaea and Bacteria.
 
