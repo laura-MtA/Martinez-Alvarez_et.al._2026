@@ -83,5 +83,8 @@ cat temp4 temp3 | sort -k4,4 > allRM_ar53_dedup.txt
 # allRM_ar53_nodef.txt: version after removing proteins labelled as part of
 # other DNA-modification systems by PADLOC/DefenseFinder (see notRM.list).
 #
-# The merge is done in R to preserve the original protein order in prot2gen.
+# The merge is done in R to preserve the original protein order in prot2gen:
+# Create allRM2prot.txt by merging allRM_ar53_nodef.txt with prot2gen.txt in R:
+# Rscript script_Rmerge.R
+
 ###############################################################################
