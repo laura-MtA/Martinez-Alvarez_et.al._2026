@@ -89,46 +89,4 @@ wc -l clustersDF_only.temp
 wc -l clustersPD_only.temp
 
 
-#Alternative script for classifying clusters
-
-infile="${1:?Usage: bash script_compare.sh <bac120_transformed.txt|ar53_transformed.txt>}"
-
-awk -F'\t' '
-{
-  cl = $1
-  src = $2
-
-  if (src == "DefenseFinder") df[cl] = 1
-  if (src == "Padloc")        pd[cl] = 1
-
-  any[cl] = 1
-}
-END{
-  total = 0
-  n_df = 0
-  n_pd = 0
-  n_both = 0
-  n_df_only = 0
-  n_pd_only = 0
-
-  for (cl in any) {
-    total++
-
-    if (df[cl]) n_df++
-    if (pd[cl]) n_pd++
-
-    if (df[cl] && pd[cl]) n_both++
-    else if (df[cl]) n_df_only++
-    else if (pd[cl]) n_pd_only++
-  }
-
-  print "Input:\t" FILENAME
-  print "Total clusters (DF or Padloc):\t" total
-  print "Clusters with DefenseFinder:\t" n_df
-  print "Clusters with Padloc:\t" n_pd
-  print "Overlap (both):\t" n_both
-  print "DefenseFinder-only:\t" n_df_only
-  print "Padloc-only:\t" n_pd_only
-}' "$infile"
-
 #END
