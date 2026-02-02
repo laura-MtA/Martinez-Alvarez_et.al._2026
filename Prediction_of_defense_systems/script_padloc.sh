@@ -6,6 +6,6 @@ conda activate padloc
 # Assumes:
 # - you are in the repo root
 # - list.txt contains the names of the genome FASTA files (.fna), one per line
-# - padloc_output/ exists (or is created before running)
+# - padloc_out/ exists (or is created before running)
 
-parallel -j 15 padloc --fna {} --outdir ../padloc_output ::: $(cat list.txt)
+while read -r genome; do padloc --fna "fna/${genome}" --outdir padloc_out --cpu 10; done < fna_genomes.list
