@@ -1,1 +1,10 @@
-Figure 4. CRISPR-Cas distribution in Archaea. A) Prevalence of CRISPR-Cas system across archaeal lineages, with the red line indicating the average prevalence for the domain. Phylum names are in bold, while class-levels are shown in regular font. Lineages highlighted in green have above-average CRISPR-Cas prevalence, while those in yellow have below-average prevalence. Asterisk (*) denotes DPANN lineages. B) Relative abundance of CRISPR-Cas types across archaeal phyla. Numbers in parentheses indicate the total genomes analyzed for each lineage.
+## Figure 4 - CRISPR-Cas distribution in Archaea
+Prevalence of CRISPR-Cas system across archaeal lineages
+
+##Contents
+- `script_crispr.R`
+  Produces bar charts representing the percentage of genomes in each phylum/class containing CRISPR-Cas systems
+
+Input table: `ar53_fun_v4.txt`
+
+
