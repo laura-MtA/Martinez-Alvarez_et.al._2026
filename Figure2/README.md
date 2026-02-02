@@ -16,7 +16,7 @@ Summary of PADLOC-predicted defense systems for **Archaea**, aggregated by taxon
 Summary of PADLOC-predicted defense systems for **Bacteria**, aggregated by taxonomic level.
 
 ##### `ar53_fun_v4.txt`
-Count matrix of PADLOC-predicted defence systems per genome for **Archaea** with added information about genome size, genome completeness and optimal growth temperature.
+Count matrix of PADLOC-predicted defense systems per genome for **Archaea** with added information about genome size, genome completeness and optimal growth temperature.
 
 ##### `b120_fun_v3.txt`
-Count matrix of PADLOC-predicted defence systems per genome for **Bacteria** with added information about genome size and genome completeness.
+Count matrix of PADLOC-predicted defense systems per genome for **Bacteria** with added information about genome size and genome completeness.
