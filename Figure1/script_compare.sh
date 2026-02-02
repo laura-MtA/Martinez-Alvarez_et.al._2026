@@ -62,32 +62,8 @@ cd-hit -i ar53_df_pd_all.faa -o ar53_df_pd_all_c1.faa -c 1
 
 python script_cdhitoutput.py
 
-# Convert the first two tokens (">Cluster" + cluster_number) into a single cluster label
-# and keep protein_id in a separate column.
-#
-# Output format after this step (tab-delimited):
-#   Cluster_<n>    <protein_id>
-#
-cat transformed_output.txt | awk '{print $1 "_" $2 "\t" $3}' > temp
-mv temp transformed_output.txt
-
-
 ###############################################################################
-# 3) Diagnostics: single-member clusters
-###############################################################################
-
-# Identify clusters with a single member (cluster appears only once)
-cut -f 1 transformed_output.txt | sort | uniq -c | awk '$1 == 1 {print $2}' > unique.temp
-wc -l unique.temp
-# example: 51935
-
-# Optional inspection:
-# less unique.temp
-# less transformed_output.txt
-
-
-###############################################################################
-# 4) Classify clusters by tool membership (DF-only, PD-only, both)
+# 3) Classify clusters by tool membership (DF-only, PD-only, both)
 ###############################################################################
 
 # Clusters that contain at least one DefenseFinder protein (based on DF_ prefix)
@@ -113,22 +89,7 @@ wc -l clustersDF_only.temp
 wc -l clustersPD_only.temp
 
 
-# Compute Venn diagram counts (DefenseFinder-only, Padloc-only, overlap) from a CD-HIT cluster long table.
-#
-# Input format (tab-delimited): cluster_id   source   protein_id   domain
-#
-# Where:
-# - source is "DefenseFinder" or "Padloc"
-# - cluster_id groups proteins that are identical (CD-HIT -c 1)
-#
-# Output:
-# - total clusters with any DF and/or Padloc member
-# - clusters with DF members
-# - clusters with Padloc members
-# - overlap (clusters with both)
-# - DF-only and Padloc-only (numbers used in the Venn diagram)
-
-set -euo pipefail
+#Alternative script for classifying clusters
 
 infile="${1:?Usage: bash script_compare.sh <bac120_transformed.txt|ar53_transformed.txt>}"
 
