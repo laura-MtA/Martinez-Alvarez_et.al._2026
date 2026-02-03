@@ -27,3 +27,6 @@ Scripts associated with **Fig. 1E–F** summarise the average number of defense 
 - `script_arch_stats.R` - produces the bar plots shown in Fig.1E-F
 
 For further details on methodology and filtering choices, please refer to the Methods section of the manuscript.
+### R environment
+
+Analyses and plotting scripts were written in **R** (v4.4.0) and developed using **RStudio** (2024.04.1 Build 748).
