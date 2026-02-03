@@ -1,7 +1,6 @@
 ## Figure 5 - phylogenetic analyses of defense systems
 
-Scripts associated to the trees shown in Figure 5, illustrating the evolutionary relationships of selected archaeal, bacterial and eukaryotic defense systems
-
+Scripts associated to the trees shown in Figure 5.
 Protein sequences used are reposited in Supplementary Table 10.
 #
 ### Requirements
@@ -34,22 +33,15 @@ The analyses illustrated here rely on the following external tools (versions use
 
 ---
 
-### Repository contents
+### Contents
 
 - `script_phylo.sh`
 
-The files in this directory exemplify the custom scripts and computational steps used to identify and annotate defense systems.  
+The files in this directory exemplify the custom scripts and computational steps used to construct phylogenetic trees in Figure 5.  
 They are intended to support **transparency and reproducibility** rather than exact reproduction of the full workflow.
 
 File paths, parameters and intermediate steps may be simplified for clarity.
 
----
 
-### Notes on reproducibility
-
-Exact reproduction of the results presented in the manuscript may additionally require:
-- Specific database versions
-- Manual filtering or curation steps
-- Software dependencies described in the manuscript and supplementary materials
 
 
